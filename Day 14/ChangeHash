@@ -1,0 +1,13 @@
+import java.util.HashMap;
+public class ChangeHash{
+    public static void main(String args[]){
+        HashMap<String,Integer> stu = new HashMap<String,Integer>();
+        stu.put("Vinay",1);
+        stu.put("Niyas",2);
+        stu.put("Abiman",3);
+        stu.put("Riya",4);
+        stu.put("Raksha",5);
+        stu.replace("Abiman",777);
+         System.out.println(stu);
+    }
+}
