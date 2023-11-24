@@ -1,0 +1,18 @@
+import java.util.*;
+public class LListIterator{
+    public static void main(String args[]){
+        LinkedList<String>list=new LinkedList<>();
+        list.add("This");
+        list.add("is");
+        list.add("the");
+        list.add("linked");
+        list.add("list");
+        System.out.println("The Linked List Elements are:\n"+list );
+        ListIterator list_iter=list.listIterator(2);
+        System.out.println("The Iterator Linked List are:");
+        while(list_iter.hasNext()){
+        System.out.println(list_iter.next());
+        }
+        
+    }
+}
