@@ -1,0 +1,14 @@
+import java.util.*;
+public class LListaddFirst{
+    public static void main(String args[]){
+        LinkedList<String>list=new LinkedList<>();
+        list.add("This");
+        list.add("is");
+        list.add("the");
+        list.add("linked");
+        list.add("list");
+        System.out.println("The Linked List Elements " );
+        list.addFirst("In Java");
+        System.out.println("The Linked List after addFirst:"+list);
+    }
+}
