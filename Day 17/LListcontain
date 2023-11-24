@@ -1,0 +1,19 @@
+import java.util.*;
+public class LListcontain{
+    public static void main(String args[]){
+        LinkedList<String>list=new LinkedList<>();
+        list.add("This");
+        list.add("is");
+        list.add("the");
+        list.add("linked");
+        list.add("list");
+        System.out.println("The Linked List Elements " );
+        System.out.println("If the Linked List Elements contain 'linked':" );
+        System.out.println(list.contains("linked") );
+        System.out.println("If the Linked List Elements contain 'Hi':" );
+        System.out.println(list.contains("Hi") );
+
+        
+        
+    }
+}
