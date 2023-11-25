@@ -1,0 +1,41 @@
+public class SinglyLLdel {
+    private ListNode head;
+    
+    private static class ListNode {
+        private int data;
+        private ListNode next;
+        
+        public ListNode(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+    
+    public void deleteLast() {
+        if (head == null || head.next == null) {
+            head = null; 
+            return;
+        }
+
+        ListNode current = head;
+        ListNode previous = null;
+
+        while (current.next != null) {
+            previous = current;
+            current = current.next;
+        }
+         previous.next = null;
+    }
+
+    public static void main(String[] args) {
+        SinglyLinkedList list = new SinglyLinkedList();
+        list.enqueue(10);
+        list.enqueue(20);
+        list.enqueue(30);
+        list.displayList(); 
+        System.out.println("The list Elements are:");
+        list.deleteLast(); 
+        System.out.println("The list Elements are after deletion are:");
+        list.displayList(); 
+    }
+}
