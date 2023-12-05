@@ -1,0 +1,71 @@
+import java.util.*;
+
+class Node {
+    int data;
+    Node next;
+    
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+public class LListindex {
+    Node head;
+
+    void insert(Node newNode) {
+        if (head == null) {
+            head = newNode;
+        } else {
+            Node temp = head;
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = newNode;
+        }
+    }
+
+    int index(int ele) {
+        Node curr = head;
+        int count = 0;
+        while (curr != null) {
+            if (curr.data == ele) {
+                return count;
+            }
+            curr = curr.next;
+            count++;
+        }
+        return -1;
+    }
+
+    void display() {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+
+    public static void main(String args[]) {
+        LListindex ll = new LListindex();
+        Node l1 = new Node(10);
+        Node l2 = new Node(20);
+        Node l3 = new Node(30);
+        Node l4 = new Node(40);
+        Node l5 = new Node(50);
+        ll.insert(l1);
+        ll.insert(l2);
+        ll.insert(l3);
+        ll.insert(l4);
+        ll.insert(l5);
+        ll.display(); 
+
+        int index = ll.index(30);
+        if (index != -1) {
+            System.out.println("Index of 30 is: "+ index);
+        } else {
+            System.out.println("Element 30 not found in the list");
+        }
+    }
+}
