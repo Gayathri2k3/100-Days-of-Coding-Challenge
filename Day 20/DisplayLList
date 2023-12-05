@@ -1,0 +1,48 @@
+import java.util.*;
+class Node{
+    int data;
+    Node next;
+    Node(int data){
+        this.data=data;
+        this.next=null;
+    }
+}
+public class DisplayLList{
+    Node head;
+    
+    void insert(Node newNode) {
+        if (head == null) {
+            head = newNode;
+        } else {
+            Node temp = head;
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = newNode;
+        }
+    }
+
+    void display() {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+    
+    public static void main(String args[]){
+        DelLListatfirst ll=new DelLListatfirst();
+        Node l1=new Node(10);
+        Node l2=new Node(20);
+        Node l3=new Node(30);
+        Node l4=new Node(40);
+        Node l5=new Node(50);
+        ll.insert(l1);
+        ll.insert(l2);
+        ll.insert(l3);
+        ll.insert(l4);
+        ll.insert(l5);
+        ll.display();
+   }
+}
