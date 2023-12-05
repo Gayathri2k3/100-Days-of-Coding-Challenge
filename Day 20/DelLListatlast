@@ -1,0 +1,69 @@
+import java.util.*;
+
+class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+public class DelLinkedList {
+    Node head;
+
+    void insert(Node newNode) {
+        if (head == null) {
+            head = newNode;
+        } else {
+            Node temp = head;
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = newNode;
+        }
+    }
+
+    void display() {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+
+    void deleteLast() {
+        if (head == null) {
+            System.out.println("List is empty.");
+        } else if (head.next == null) {
+            head = null;
+        } else {
+            Node curr = head;
+            while (curr.next.next != null) {
+                curr = curr.next;
+            }
+            curr.next = null;
+        }
+    }
+    public static void main(String args[]) {
+        DelLinkedList ll = new DelLinkedList();
+        Node l1 = new Node(10);
+        Node l2 = new Node(20);
+        Node l3 = new Node(30);
+        Node l4 = new Node(40);
+        Node l5 = new Node(50);
+        ll.insert(l1);
+        ll.insert(l2);
+        ll.insert(l3);
+        ll.insert(l4);
+        ll.insert(l5);
+
+        System.out.println("List before Deletion:");
+        ll.display();
+
+        ll.deleteLast();
+        System.out.println("List after Deletion:");
+        ll.display();
+    }
+}
