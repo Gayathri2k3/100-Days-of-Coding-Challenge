@@ -1,0 +1,13 @@
+import java.util.*;
+public class Average{
+    public static void main(String args[]){
+        int a[]=new int[]{50,60,70,85,98,99};
+        int sum=0;
+        for(int i=0;i<a.length;i++){
+            sum=sum+a[i];
+            
+        }
+        double average=sum/a.length;
+        System.out.println("The Average of the arr are:"+" "+average);
+    }
+}
