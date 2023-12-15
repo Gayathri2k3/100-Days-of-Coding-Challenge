@@ -1,0 +1,18 @@
+import java.util.*;
+public class IfElse{
+    int age1=20;
+    int age2=18;
+    void Demo(){
+        if(age1>age2){
+            System.out.println("The age 1 is Elder");
+        }
+        else{
+            System.out.println("The age 2 is an Younger");
+        }
+    }
+    public static void main(String args[]){
+        IfElse obj=new IfElse();
+        obj.Demo();
+    }
+    
+}
