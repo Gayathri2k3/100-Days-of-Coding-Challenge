@@ -1,0 +1,11 @@
+import java.util.*;
+class Finalkey{  
+ final int speedlimit=90;
+ void run(){  
+  speedlimit=400;  
+ }  
+ public static void main(String args[]){  
+ Finalkey obj=new  Finalkey();  
+ obj.run();  
+ }  
+}
