@@ -1,0 +1,10 @@
+import java.util.*;
+public class ForEach{    
+    public static void main(String[] args) {     
+    String[] languages = {"Java","C","C++","Python","JavaScript"};    
+    System.out.println("Printing the content of the array names:\n");    
+    for(String name:languages) {    
+    System.out.println(name);    
+    }    
+ }    
+}    
