@@ -1,0 +1,16 @@
+import java.util.*;
+class Privatemodifier{
+    private int data=20;
+    private void msg(){
+        System.out.println("Private Modifier");
+    }
+}
+public class Cur{
+    public static void main(String args[]){
+        Privatemodifier obj=new Privatemodifier();
+        obj.msg();
+        System.out.println(obj.data);
+    }
+}
+//It will result as compile time error becoz class 1 has private data and private method.
+//If we try to execute these private stuffs outside of the class it leads to compile time error.
