@@ -1,0 +1,12 @@
+package pack;
+public class Demo1{
+    public static void main(String args[]){
+    int a=10;
+    float b=2.0;
+    double c=a+b;
+    System.out.println("The Final value is: "+c);
+    System.out.println("The other package output using this import package are:");
+    Demo1 obj = new Demo1();
+    obj.empDetails();
+}
+}
